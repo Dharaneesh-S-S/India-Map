@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Interactive Calendar and India Map</title>
+    <style>
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            align-items: left;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            align-items: center;
+        }
+
+        .state-link {
+            position: absolute;
+            display: inline-block;
+            color: #DA70D6;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+            transform: translate(-50%, -120%);
+            z-index: 2;
+        }
+
+        .tooltip-box {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 2px solid #ccc;
+            padding: 10px;
+            max-width: 500px;
+            z-index: 999;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: black;
+        }
+
+        .state-link:hover .tooltip-box {
+            display: block;
+        }
+
+       .state-link .tooltip-box {
+    width: 300px;
+}
+.state-name {
+    position: relative;
+    z-index: 1;
+}
+
+
+        .state-link.ladakh { top: 11%; left: 37%; }
+        .state-link.jammu-kashmir { top: 15.5%; left: 30%; }
+        .state-link.himachal-pradesh { top: 22%; left: 37.5%; }
+        .state-link.punjab { top: 23.5%; left: 32%; }
+        .state-link.haryana { top: 28.7%; left: 34.5%; }
+        .state-link.uttarakhand { top: 25%; left: 43%; }
+        .state-link.rajasthan { top: 36%; left: 25%; }
+        .state-link.uttar-pradesh { top: 36.5%; left: 47%; }
+        .state-link.gujarat { top: 47.5%; left: 19%; }
+        .state-link.madhya-pradesh { top: 49%; left: 36%; }
+        .state-link.maharashtra { top: 61%; left: 29%; }
+        .state-link.chhattisgarh { top: 53%; left: 52%; }
+        .state-link.bihar { top: 40%; left: 60%; }
+        .state-link.jharkhand { top: 46%; left: 59.5%; }
+        .state-link.west-bengal { top: 50%; left: 66%; }
+        .state-link.odisha { top: 58%; left: 56%; }
+        .state-link.assam { top: 36%; left: 80%; }
+        .state-link.arunachal-pradesh { top: 33.5%; left: 83%; }
+        .state-link.nagaland { top: 35.5%; left: 89.5%; }
+        .state-link.manipur { top: 40.5%; left: 86.5%; }
+        .state-link.meghalaya { top: 38.7%; left: 78%; }
+        .state-link.mizoram { top: 47%; left: 85%; }
+        .state-link.tripura { top: 44%; left: 81%; }
+        .state-link.sikkim { top: 33%; left: 70.5%; }
+        .state-link.karnataka { top: 75.7%; left: 30.5%; }
+        .state-link.kerala { top: 92%; left: 35%; }
+        .state-link.tamil-nadu { top: 88%; left: 38%; }
+        .state-link.telegana { top: 65.5%; left: 41%; }
+        .state-link.andhra-pradesh { top: 76.5%; left: 39.5%; }
+        .state-link.goa { top: 72.5%; left: 26%; }
+        .state-link.puducherry { top: 84.5%; left: 47%; }
+
+        .state-link .fa-map-pin {
+            position: absolute;
+            font-size: 24px;
+            color: red;
+            transform: translate(-50%, 0);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="map-container">
+        <img src="map.jpg" alt="Map of India">
+
+        <a href="https://example.com/ladakh" class="state-link ladakh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Ladakh
+            <div class="tooltip-box">
+                <img src="ladakh.webp" alt="Ladakh" style="width: 100%;">
+                <p>Info about Ladakh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/jammu-kashmir" class="state-link jammu-kashmir">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Jammu &<br>Kashmir
+            <div class="tooltip-box">
+                <img src="jammu.jpg" alt="Jammu & Kashmir" style="width: 100%;">
+                <p>Info about Jammu & Kashmir...</p>
+            </div>
+        </a>
+        <a href="https://example.com/himachal-pradesh" class="state-link himachal-pradesh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Himachal<br>Pradesh
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\himachal-pradesh.jpg" alt="Himachal Pradesh" style="width: 100%;">
+                <p>Info about Himachal Pradesh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/punjab" class="state-link punjab">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Punjab
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\punjab.jpg" alt="Punjab" style="width: 100%;">
+                <p>Info about Punjab...</p>
+            </div>
+        </a>
+        <a href="https://example.com/haryana" class="state-link haryana">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Haryana
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\haryana.jpg" alt="Haryana" style="width: 100%;">
+                <p>Info about Haryana...</p>
+            </div>
+        </a>
+        <a href="https://example.com/uttarakhand" class="state-link uttarakhand">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Uttarakhand
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\uttarakhand.jpg" alt="Uttarakhand" style="width: 100%;">
+                <p>Info about Uttarakhand...</p>
+            </div>
+        </a>
+        <a href="https://example.com/rajasthan" class="state-link rajasthan">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Rajasthan
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\rajasthan.jpg" alt="Rajasthan" style="width: 100%;">
+                <p>Info about Rajasthan...</p>
+            </div>
+        </a>
+        <a href="https://example.com/uttar-pradesh" class="state-link uttar-pradesh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Uttar Pradesh
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\uttar-pradesh.jpg" alt="Uttar Pradesh" style="width: 100%;">
+                <p>Info about Uttar Pradesh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/gujarat" class="state-link gujarat">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Gujarat
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\gujarat.jpg" alt="Gujarat" style="width: 100%;">
+                <p>Info about Gujarat...</p>
+            </div>
+        </a>
+        <a href="https://example.com/madhya-pradesh" class="state-link madhya-pradesh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Madhya Pradesh
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\madhya-pradesh.jpg" alt="Madhya Pradesh" style="width: 100%;">
+                <p>Info about Madhya Pradesh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/maharashtra" class="state-link maharashtra">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Maharashtra
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\maharashtra.jpg" alt="Maharashtra" style="width: 100%;">
+                <p>Info about Maharashtra...</p>
+            </div>
+        </a>
+        <a href="https://example.com/chhattisgarh" class="state-link chhattisgarh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Chhattisgarh
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\chhattisgarh.jpg" alt="Chhattisgarh" style="width: 100%;">
+                <p>Info about Chhattisgarh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/bihar" class="state-link bihar">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Bihar
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\bihar.jpg" alt="Bihar" style="width: 100%;">
+                <p>Info about Bihar...</p>
+            </div>
+        </a>
+        <a href="https://example.com/jharkhand" class="state-link jharkhand">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Jharkhand
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\jharkhand.jpg" alt="Jharkhand" style="width: 100%;">
+                <p>Info about Jharkhand...</p>
+            </div>
+        </a>
+        <a href="https://example.com/west-bengal" class="state-link west-bengal">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;West<br>Bengal
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\west-bengal.jpg" alt="West Bengal" style="width: 100%;">
+                <p>Info about West Bengal...</p>
+            </div>
+        </a>
+        <a href="https://example.com/odisha" class="state-link odisha">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Odisha
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\odisha.jpg" alt="Odisha" style="width: 100%;">
+                <p>Info about Odisha...</p>
+            </div>
+        </a>
+        <a href="https://example.com/assam" class="state-link assam">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Assam
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\assam.jpg" alt="Assam" style="width: 100%;">
+                <p>Info about Assam...</p>
+            </div>
+        </a>
+        <a href="https://example.com/arunachal-pradesh" class="state-link arunachal-pradesh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Arunachal<br>Pradesh
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\arunachal-pradesh.jpg" alt="Arunachal Pradesh" style="width: 100%;">
+                <p>Info about Arunachal Pradesh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/nagaland" class="state-link nagaland">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Nagaland
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\nagaland.jpg" alt="Nagaland" style="width: 100%;">
+                <p>Info about Nagaland...</p>
+            </div>
+        </a>
+        <a href="https://example.com/manipur" class="state-link manipur">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Manipur
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\manipur.jpg" alt="Manipur" style="width: 100%;">
+                <p>Info about Manipur...</p>
+            </div>
+        </a>
+        <a href="https://example.com/meghalaya" class="state-link meghalaya">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Meghalaya
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\meghalaya.jpg" alt="Meghalaya" style="width: 100%;">
+                <p>Info about Meghalaya...</p>
+            </div>
+        </a>
+        <a href="https://example.com/mizoram" class="state-link mizoram">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Mizoram
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\mizoram.jpg" alt="Mizoram" style="width: 100%;">
+                <p>Info about Mizoram...</p>
+            </div>
+        </a>
+        <a href="https://example.com/tripura" class="state-link tripura">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Tripura
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\tripura.jpg" alt="Tripura" style="width: 100%;">
+                <p>Info about Tripura...</p>
+            </div>
+        </a>
+        <a href="https://example.com/sikkim" class="state-link sikkim">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Sikkim
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\sikkim.jpg" alt="Sikkim" style="width: 100%;">
+                <p>Info about Sikkim...</p>
+            </div>
+        </a>
+        <a href="https://example.com/karnataka" class="state-link karnataka">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Karnataka
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\karnataka.jpg" alt="Karnataka" style="width: 100%;">
+                <p>Info about Karnataka...</p>
+            </div>
+        </a>
+        <a href="https://example.com/kerala" class="state-link kerala">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Kerala
+            <div class="tooltip-box">
+                <img src="kerala.png" alt="Kerala" style="width: 100%;">
+                <p>Info about Kerala...</p>
+            </div>
+        </a>
+        <a href="https://example.com/kerala" class="state-link tamil-nadu">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Tamil Nadu
+            <div class="tooltip-box">
+                <img src="tamil nadu.svg" alt="Tamil Nadu" style="height:300% width: 300%;">
+                <pre><p><strong>Total Area             :</strong> 130,058 km²<br><strong>Population             :</strong> 72.1 million<br><strong>Chief Minister         :</strong> M. K. Stalin<br><strong>Total No. of Districts :</strong> 38<br><strong>Total Area of Farmland :</strong> 58,000 km²<br><strong>Official Language(s)   :</strong> Tamil<br><strong>State Dance            :</strong> Bharatnatyam<br><strong>State Song             :</strong> Tamil Thai Valthu<br>
+                </p></pre>
+            </div>
+        </a>
+
+        <a href="https://example.com/telegana" class="state-link telegana">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Telangana
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\telegana.jpg" alt="Telangana" style="width: 100%;">
+                <p>Info about Telangana...</p>
+            </div>
+        </a>
+        <a href="https://example.com/andhra-pradesh" class="state-link andhra-pradesh">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Andhra<br>Pradesh
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\andhra-pradesh.jpg" alt="Andhra Pradesh" style="width: 100%;">
+                <p>Info about Andhra Pradesh...</p>
+            </div>
+        </a>
+        <a href="https://example.com/puducherry" class="state-link puducherry">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Puducherry
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\puducherry.jpg" alt="Puducherry" style="width: 100%;">
+                <p>Info about Puducherry...</p>
+            </div>
+        </a>
+        <a href="https://example.com/puducherry" class="state-link goa">
+            <i class="fas fa-map-pin"></i>
+            &nbsp;&nbsp;&nbsp;Goa
+            <div class="tooltip-box">
+                <img src="E:\College\competition\SIH\Pilgrim center\puducherry.jpg" alt="Puducherry" style="width: 100%;">
+                <p>Info about Puducherry...</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
