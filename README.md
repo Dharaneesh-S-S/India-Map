@@ -37,3 +37,32 @@ Here’s how the interactive map looks:
 
 ## 📂 Project Structure  
 
+├── index.html # Main HTML file
+├── images/ # Map + State Images
+│ ├── map.jpg
+│ ├── tamil nadu.svg
+│ ├── ladakh.png
+│ ├── punjab.png
+│ └── ...
+├── README.md # Documentation
+
+
+## 🎨 Customization
+
+Add new states or union territories by copying an <a> block in index.html.
+
+Replace tooltip images in the images/ folder.
+
+Modify CSS for different pin colors, tooltip positions, or animations.
+
+## ✨ Future Enhancements
+
+Add search functionality to find states quickly 🔍.
+
+Include statistics charts (population, literacy rate, etc.) 📊.
+
+Dark mode support 🌙.
+
+## 👨‍💻 Author
+
+Created with ❤️ by Dharaneesh S S
