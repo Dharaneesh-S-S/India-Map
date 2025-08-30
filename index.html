@@ -55,7 +55,7 @@
     border: 2px solid #ccc;
     padding: 10px;
     width: 300px;        /* fixed width */
-    z-index: 9999;       /* higher so it floats above map */
+    z-index: 10;       /* higher so it floats above map */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: left;
     color: black;
@@ -71,7 +71,7 @@
 }
 .state-name {
     position: relative;
-    z-index: 1;
+    z-index: -1 ;
 }
 
 
@@ -84,7 +84,7 @@
         .state-link.rajasthan { top: 36%; left: 25%; }
         .state-link.uttar-pradesh { top: 36.5%; left: 47%; }
         .state-link.gujarat { top: 47.5%; left: 19%; }
-        .state-link.madhya-pradesh { top: 49%; left: 36%; }
+        .state-link.madhya_pradesh { top: 49%; left: 36%; }
         .state-link.maharashtra { top: 61%; left: 29%; }
         .state-link.chhattisgarh { top: 53%; left: 52%; }
         .state-link.bihar { top: 40%; left: 60%; }
@@ -121,13 +121,13 @@
 
 
     <div class="map-container">
-        <img src="map.jpg" alt="Map of India">
+        <img src="images/map.jpg" alt="Map of India">
 
         <a href="https://example.com/ladakh" class="state-link ladakh">
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Ladakh
             <div class="tooltip-box">
-                <img src="ladakh.png" alt="Ladakh" style="width: 100%;">
+                <img src="images/ladakh.png" alt="Ladakh" style="width: 100%;">
                 <p>Info about Ladakh...</p>
             </div>
         </a>
@@ -135,7 +135,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Jammu &<br>Kashmir
             <div class="tooltip-box">
-                <img src="jammu and kashmir.png" alt="Jammu & Kashmir" style="width: 100%;">
+                <img src="images/jammu and kashmir.png" alt="Jammu & Kashmir" style="width: 100%;">
                 <p>Info about Jammu & Kashmir...</p>
             </div>
         </a>
@@ -143,7 +143,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Himachal<br>Pradesh
             <div class="tooltip-box">
-                <img src="himachal pradesh.png" alt="Himachal Pradesh" style="width: 100%;">
+                <img src="images/himachal pradesh.png" alt="Himachal Pradesh" style="width: 100%;">
                 <p>Info about Himachal Pradesh...</p>
             </div>
         </a>
@@ -151,7 +151,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Punjab
             <div class="tooltip-box">
-                <img src="punjab.png" alt="Punjab" style="width: 100%;">
+                <img src="images/punjab.png" alt="Punjab" style="width: 100%;">
                 <p>Info about Punjab...</p>
             </div>
         </a>
@@ -159,7 +159,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Haryana
             <div class="tooltip-box">
-                <img src="haryana.png" alt="Haryana" style="width: 100%;">
+                <img src="images/haryana.png" alt="Haryana" style="width: 100%;">
                 <p>Info about Haryana...</p>
             </div>
         </a>
@@ -167,7 +167,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Uttarakhand
             <div class="tooltip-box">
-                <img src="uttarakhand.png" alt="Uttarakhand" style="width: 100%;">
+                <img src="images/uttarakhand.png" alt="Uttarakhand" style="width: 100%;">
                 <p>Info about Uttarakhand...</p>
             </div>
         </a>
@@ -175,7 +175,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Rajasthan
             <div class="tooltip-box">
-                <img src="rajasthan.png" alt="Rajasthan" style="width: 100%;">
+                <img src="images/rajasthan.png" alt="Rajasthan" style="width: 100%;">
                 <p>Info about Rajasthan...</p>
             </div>
         </a>
@@ -183,7 +183,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Uttar Pradesh
             <div class="tooltip-box">
-                <img src="uttar pradesh.png" alt="Uttar Pradesh" style="width: 100%;">
+                <img src="images/uttar pradesh.png" alt="Uttar Pradesh" style="width: 100%;">
                 <p>Info about Uttar Pradesh...</p>
             </div>
         </a>
@@ -191,15 +191,15 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Gujarat
             <div class="tooltip-box">
-                <img src="gujarat.png" alt="Gujarat" style="width: 100%;">
+                <img src="images/gujarat.png" alt="Gujarat" style="width: 100%;">
                 <p>Info about Gujarat...</p>
             </div>
         </a>
-        <a href="https://example.com/madhya-pradesh" class="state-link madhya-pradesh">
+        <a href="https://example.com/madhya-pradesh" class="state-link madhya_pradesh">
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Madhya Pradesh
             <div class="tooltip-box">
-                <img src="madhya pradesh.png" alt="Madhya Pradesh" style="width: 100%;">
+                <img src="images/madhya pradesh.png" alt="Madhya Pradesh" style="width: 100%;">
                 <p>Info about Madhya Pradesh...</p>
             </div>
         </a>
@@ -207,7 +207,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Maharashtra
             <div class="tooltip-box">
-                <img src="maharashtra.png" alt="Maharashtra" style="width: 100%;">
+                <img src="images/maharashtra.png" alt="Maharashtra" style="width: 100%;">
                 <p>Info about Maharashtra...</p>
             </div>
         </a>
@@ -215,7 +215,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Chhattisgarh
             <div class="tooltip-box">
-                <img src="chhattisgarh.png" alt="Chhattisgarh" style="width: 100%;">
+                <img src="images/chhattisgarh.png" alt="Chhattisgarh" style="width: 100%;">
                 <p>Info about Chhattisgarh...</p>
             </div>
         </a>
@@ -223,7 +223,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Bihar
             <div class="tooltip-box">
-                <img src="bihar.png" alt="Bihar" style="width: 100%;">
+                <img src="images/bihar.png" alt="Bihar" style="width: 100%;">
                 <p>Info about Bihar...</p>
             </div>
         </a>
@@ -231,7 +231,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Jharkhand
             <div class="tooltip-box">
-                <img src="jharkhand.png" alt="Jharkhand" style="width: 100%;">
+                <img src="images/jharkhand.png" alt="Jharkhand" style="width: 100%;">
                 <p>Info about Jharkhand...</p>
             </div>
         </a>
@@ -239,7 +239,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;West<br>Bengal
             <div class="tooltip-box">
-                <img src="west bengal.png" alt="West Bengal" style="width: 100%;">
+                <img src="images/west bengal.png" alt="West Bengal" style="width: 100%;">
                 <p>Info about West Bengal...</p>
             </div>
         </a>
@@ -247,7 +247,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Odisha
             <div class="tooltip-box">
-                <img src="odisha.png" alt="Odisha" style="width: 100%;">
+                <img src="images/odisha.png" alt="Odisha" style="width: 100%;">
                 <p>Info about Odisha...</p>
             </div>
         </a>
@@ -255,7 +255,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Assam
             <div class="tooltip-box">
-                <img src="assam.png" alt="Assam" style="width: 100%;">
+                <img src="images/assam.png" alt="Assam" style="width: 100%;">
                 <p>Info about Assam...</p>
             </div>
         </a>
@@ -263,7 +263,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Arunachal<br>Pradesh
             <div class="tooltip-box">
-                <img src="arunachal pradesh.png" alt="Arunachal Pradesh" style="width: 100%;">
+                <img src="images/arunachal pradesh.png" alt="Arunachal Pradesh" style="width: 100%;">
                 <p>Info about Arunachal Pradesh...</p>
             </div>
         </a>
@@ -271,7 +271,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Nagaland
             <div class="tooltip-box">
-                <img src="nagaland.png" alt="Nagaland" style="width: 100%;">
+                <img src="images/nagaland.png" alt="Nagaland" style="width: 100%;">
                 <p>Info about Nagaland...</p>
             </div>
         </a>
@@ -279,7 +279,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Manipur
             <div class="tooltip-box">
-                <img src="manipur.png" alt="Manipur" style="width: 100%;">
+                <img src="images/manipur.png" alt="Manipur" style="width: 100%;">
                 <p>Info about Manipur...</p>
             </div>
         </a>
@@ -287,7 +287,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Meghalaya
             <div class="tooltip-box">
-                <img src="meghalaya.png" alt="Meghalaya" style="width: 100%;">
+                <img src="images/meghalaya.png" alt="Meghalaya" style="width: 100%;">
                 <p>Info about Meghalaya...</p>
             </div>
         </a>
@@ -295,7 +295,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Mizoram
             <div class="tooltip-box">
-                <img src="mizoram.png" alt="Mizoram" style="width: 100%;">
+                <img src="images/mizoram.png" alt="Mizoram" style="width: 100%;">
                 <p>Info about Mizoram...</p>
             </div>
         </a>
@@ -303,7 +303,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Tripura
             <div class="tooltip-box">
-                <img src="tripura.png" alt="Tripura" style="width: 100%;">
+                <img src="images/tripura.png" alt="Tripura" style="width: 100%;">
                 <p>Info about Tripura...</p>
             </div>
         </a>
@@ -311,7 +311,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Sikkim
             <div class="tooltip-box">
-                <img src="sikkim.png" alt="Sikkim" style="width: 100%;">
+                <img src="images/sikkim.png" alt="Sikkim" style="width: 100%;">
                 <p>Info about Sikkim...</p>
             </div>
         </a>
@@ -319,7 +319,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Karnataka
             <div class="tooltip-box">
-                <img src="karnataka.png" alt="Karnataka" style="width: 100%;">
+                <img src="images/karnataka.png" alt="Karnataka" style="width: 100%;">
                 <p>Info about Karnataka...</p>
             </div>
         </a>
@@ -327,7 +327,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Kerala
             <div class="tooltip-box">
-                <img src="kerala.png" alt="Kerala" style="width: 100%;">
+                <img src="images/kerala.png" alt="Kerala" style="width: 100%;">
                 <p>Info about Kerala...</p>
             </div>
         </a>
@@ -335,17 +335,16 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Tamil Nadu
             <div class="tooltip-box">
-                <img src="tamil nadu.svg" alt="Tamil Nadu" style="height:300% width: 300%;">
+                <img src="images/tamil nadu.svg" alt="Tamil Nadu" style="height:300% width: 300%;">
                 <pre><p><strong>Total Area             :</strong> 130,058 km²<br><strong>Population             :</strong> 72.1 million<br><strong>Chief Minister         :</strong> M. K. Stalin<br><strong>Total No. of Districts :</strong> 38<br><strong>Total Area of Farmland :</strong> 58,000 km²<br><strong>Official Language(s)   :</strong> Tamil<br><strong>State Dance            :</strong> Bharatnatyam<br><strong>State Song             :</strong> Tamil Thai Valthu<br>
                 </p></pre>
             </div>
         </a>
-
         <a href="https://example.com/telegana" class="state-link telegana">
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Telangana
             <div class="tooltip-box">
-                <img src="telangana.png" alt="Telangana" style="width: 100%;">
+                <img src="images/telangana.png" alt="Telangana" style="width: 100%;">
                 <p>Info about Telangana...</p>
             </div>
         </a>
@@ -353,7 +352,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Andhra<br>Pradesh
             <div class="tooltip-box">
-                <img src="andra.png" alt="Andhra Pradesh" style="width: 100%;">
+                <img src="images/andra.png" alt="Andhra Pradesh" style="width: 100%;">
                 <p>Info about Andhra Pradesh...</p>
             </div>
         </a>
