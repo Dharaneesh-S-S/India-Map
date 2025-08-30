@@ -46,18 +46,21 @@
             z-index: 2;
         }
 
-        .tooltip-box {
-            display: none;
-            position: absolute;
-            background-color: white;
-            border: 2px solid #ccc;
-            padding: 10px;
-            max-width: 500px;
-            z-index: 999;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            color: black;
-        }
+.tooltip-box {
+    display: none;
+    position: absolute;
+    top: -10px;          /* small shift upward */
+    left: 120%;          /* move tooltip to the right of the pin */
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 300px;        /* fixed width */
+    z-index: 9999;       /* higher so it floats above map */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: black;
+}
+
 
         .state-link:hover .tooltip-box {
             display: block;
@@ -124,7 +127,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Ladakh
             <div class="tooltip-box">
-                <img src="ladakh.webp" alt="Ladakh" style="width: 100%;">
+                <img src="ladakh.png" alt="Ladakh" style="width: 100%;">
                 <p>Info about Ladakh...</p>
             </div>
         </a>
@@ -132,7 +135,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Jammu &<br>Kashmir
             <div class="tooltip-box">
-                <img src="jammu.jpg" alt="Jammu & Kashmir" style="width: 100%;">
+                <img src="jammu and kashmir.png" alt="Jammu & Kashmir" style="width: 100%;">
                 <p>Info about Jammu & Kashmir...</p>
             </div>
         </a>
@@ -140,7 +143,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Himachal<br>Pradesh
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\himachal-pradesh.jpg" alt="Himachal Pradesh" style="width: 100%;">
+                <img src="himachal pradesh.png" alt="Himachal Pradesh" style="width: 100%;">
                 <p>Info about Himachal Pradesh...</p>
             </div>
         </a>
@@ -148,7 +151,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Punjab
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\punjab.jpg" alt="Punjab" style="width: 100%;">
+                <img src="punjab.png" alt="Punjab" style="width: 100%;">
                 <p>Info about Punjab...</p>
             </div>
         </a>
@@ -156,7 +159,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Haryana
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\haryana.jpg" alt="Haryana" style="width: 100%;">
+                <img src="haryana.png" alt="Haryana" style="width: 100%;">
                 <p>Info about Haryana...</p>
             </div>
         </a>
@@ -164,7 +167,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Uttarakhand
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\uttarakhand.jpg" alt="Uttarakhand" style="width: 100%;">
+                <img src="uttarakhand.png" alt="Uttarakhand" style="width: 100%;">
                 <p>Info about Uttarakhand...</p>
             </div>
         </a>
@@ -172,7 +175,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Rajasthan
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\rajasthan.jpg" alt="Rajasthan" style="width: 100%;">
+                <img src="rajasthan.png" alt="Rajasthan" style="width: 100%;">
                 <p>Info about Rajasthan...</p>
             </div>
         </a>
@@ -180,7 +183,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Uttar Pradesh
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\uttar-pradesh.jpg" alt="Uttar Pradesh" style="width: 100%;">
+                <img src="uttar pradesh.png" alt="Uttar Pradesh" style="width: 100%;">
                 <p>Info about Uttar Pradesh...</p>
             </div>
         </a>
@@ -188,7 +191,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Gujarat
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\gujarat.jpg" alt="Gujarat" style="width: 100%;">
+                <img src="gujarat.png" alt="Gujarat" style="width: 100%;">
                 <p>Info about Gujarat...</p>
             </div>
         </a>
@@ -196,7 +199,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Madhya Pradesh
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\madhya-pradesh.jpg" alt="Madhya Pradesh" style="width: 100%;">
+                <img src="madhya pradesh.png" alt="Madhya Pradesh" style="width: 100%;">
                 <p>Info about Madhya Pradesh...</p>
             </div>
         </a>
@@ -204,7 +207,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Maharashtra
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\maharashtra.jpg" alt="Maharashtra" style="width: 100%;">
+                <img src="maharashtra.png" alt="Maharashtra" style="width: 100%;">
                 <p>Info about Maharashtra...</p>
             </div>
         </a>
@@ -212,7 +215,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Chhattisgarh
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\chhattisgarh.jpg" alt="Chhattisgarh" style="width: 100%;">
+                <img src="chhattisgarh.png" alt="Chhattisgarh" style="width: 100%;">
                 <p>Info about Chhattisgarh...</p>
             </div>
         </a>
@@ -220,7 +223,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Bihar
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\bihar.jpg" alt="Bihar" style="width: 100%;">
+                <img src="bihar.png" alt="Bihar" style="width: 100%;">
                 <p>Info about Bihar...</p>
             </div>
         </a>
@@ -228,7 +231,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Jharkhand
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\jharkhand.jpg" alt="Jharkhand" style="width: 100%;">
+                <img src="jharkhand.png" alt="Jharkhand" style="width: 100%;">
                 <p>Info about Jharkhand...</p>
             </div>
         </a>
@@ -236,7 +239,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;West<br>Bengal
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\west-bengal.jpg" alt="West Bengal" style="width: 100%;">
+                <img src="west bengal.png" alt="West Bengal" style="width: 100%;">
                 <p>Info about West Bengal...</p>
             </div>
         </a>
@@ -244,7 +247,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Odisha
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\odisha.jpg" alt="Odisha" style="width: 100%;">
+                <img src="odisha.png" alt="Odisha" style="width: 100%;">
                 <p>Info about Odisha...</p>
             </div>
         </a>
@@ -252,7 +255,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Assam
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\assam.jpg" alt="Assam" style="width: 100%;">
+                <img src="assam.png" alt="Assam" style="width: 100%;">
                 <p>Info about Assam...</p>
             </div>
         </a>
@@ -260,7 +263,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Arunachal<br>Pradesh
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\arunachal-pradesh.jpg" alt="Arunachal Pradesh" style="width: 100%;">
+                <img src="arunachal pradesh.png" alt="Arunachal Pradesh" style="width: 100%;">
                 <p>Info about Arunachal Pradesh...</p>
             </div>
         </a>
@@ -268,7 +271,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Nagaland
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\nagaland.jpg" alt="Nagaland" style="width: 100%;">
+                <img src="nagaland.png" alt="Nagaland" style="width: 100%;">
                 <p>Info about Nagaland...</p>
             </div>
         </a>
@@ -276,7 +279,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Manipur
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\manipur.jpg" alt="Manipur" style="width: 100%;">
+                <img src="manipur.png" alt="Manipur" style="width: 100%;">
                 <p>Info about Manipur...</p>
             </div>
         </a>
@@ -284,7 +287,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Meghalaya
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\meghalaya.jpg" alt="Meghalaya" style="width: 100%;">
+                <img src="meghalaya.png" alt="Meghalaya" style="width: 100%;">
                 <p>Info about Meghalaya...</p>
             </div>
         </a>
@@ -292,7 +295,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Mizoram
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\mizoram.jpg" alt="Mizoram" style="width: 100%;">
+                <img src="mizoram.png" alt="Mizoram" style="width: 100%;">
                 <p>Info about Mizoram...</p>
             </div>
         </a>
@@ -300,7 +303,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Tripura
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\tripura.jpg" alt="Tripura" style="width: 100%;">
+                <img src="tripura.png" alt="Tripura" style="width: 100%;">
                 <p>Info about Tripura...</p>
             </div>
         </a>
@@ -308,7 +311,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Sikkim
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\sikkim.jpg" alt="Sikkim" style="width: 100%;">
+                <img src="sikkim.png" alt="Sikkim" style="width: 100%;">
                 <p>Info about Sikkim...</p>
             </div>
         </a>
@@ -316,7 +319,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Karnataka
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\karnataka.jpg" alt="Karnataka" style="width: 100%;">
+                <img src="karnataka.png" alt="Karnataka" style="width: 100%;">
                 <p>Info about Karnataka...</p>
             </div>
         </a>
@@ -342,7 +345,7 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Telangana
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\telegana.jpg" alt="Telangana" style="width: 100%;">
+                <img src="telangana.png" alt="Telangana" style="width: 100%;">
                 <p>Info about Telangana...</p>
             </div>
         </a>
@@ -350,18 +353,18 @@
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Andhra<br>Pradesh
             <div class="tooltip-box">
-                <img src="E:\College\competition\SIH\Pilgrim center\andhra-pradesh.jpg" alt="Andhra Pradesh" style="width: 100%;">
+                <img src="andra.png" alt="Andhra Pradesh" style="width: 100%;">
                 <p>Info about Andhra Pradesh...</p>
             </div>
         </a>
-        <a href="https://example.com/puducherry" class="state-link puducherry">
+        <!-- <a href="https://example.com/puducherry" class="state-link puducherry">
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Puducherry
             <div class="tooltip-box">
                 <img src="E:\College\competition\SIH\Pilgrim center\puducherry.jpg" alt="Puducherry" style="width: 100%;">
                 <p>Info about Puducherry...</p>
             </div>
-        </a>
+        </a> -->
         <!-- <a href="https://example.com/puducherry" class="state-link goa">
             <i class="fas fa-map-pin"></i>
             &nbsp;&nbsp;&nbsp;Goa
