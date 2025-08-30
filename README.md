@@ -35,23 +35,6 @@ Here’s how the interactive map looks:
 
 ---
 
-## 📂 Project Structure  
-
-├── index.html # Main HTML file
-
-├── images/ # Map + State Images
-
-│ ├── map.jpg
-
-│ ├── tamil nadu.svg
-
-│ ├── ladakh.png
-
-│ ├── punjab.png
-
-│ └── ...
-
-├── README.md # Documentation
 
 
 ## 🎨 Customization
